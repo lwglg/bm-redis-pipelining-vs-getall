@@ -1,18 +1,11 @@
 import redis
-from typing import TypedDict
 
 from .timing import timing
 
 
 __all__ = [
-    "BenchmarkResult",
     "perform_data_fetching",
 ]
-
-
-class BenchmarkResult(TypedDict):
-    elapsed_time: float
-    response: redis.typing.ResponseT
 
 
 @timing
